@@ -1,0 +1,17 @@
+# 不混淆所有jni native 方法    
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+# 不混淆java反射
+-keepattributes Signature
+-keepattributes EnclosingMethod
+
+# 不混淆该包名下的所有class和成员变量
+-keep class com.android.VRAdmin.** {*;}
+
+# 不混淆类方法
+-keep class com.android.VRAdmin.VRManager {
+}
+
+-dontwarn
